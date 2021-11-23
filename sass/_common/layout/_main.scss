@@ -6,65 +6,6 @@
 
 main{
     >.container{
-        min-height: 100vw;
 
-        .main-visual{
-            min-height: 200px;
-            margin-bottom: $s-05;
-            background-image: url(../img/wallpaper-white-sp.webp);
-            background-repeat: no-repeat;
-            background-size: 100%;
-
-        }
-
-        .section-work{
-            margin-bottom: $s-05;
-            
-            .work-area{
-                width: 90%;
-                display: flex;
-                flex-wrap: wrap;
-                margin: 0 auto;
-                
-                .work-item{
-                    flex: 0 0 100%;
-                    padding: $s-03;
-    
-                    background-color: #fff;
-                    box-shadow: 0 1px 5px rgba(0, 0, 0, .1);
-                    border-radius: 5px;
-    
-                    .item-head{
-                        margin-bottom: $s-01;
-                        text-align: center;
-                        font-size: 2.4rem;
-                        letter-spacing: .08em;
-                    }
-    
-                    .item-img{
-                        margin-bottom: $s-01;
-                        text-align: center;
-                        img{
-                            width: $s-10;
-                        }
-                    }
-    
-                    .item-text{
-                        text-align: left;
-                        font-size: 1.4rem;
-                        line-height: 2;
-
-                    }
-    
-                    &:not(:last-child){
-                        margin-bottom: $s-02;
-                    }
-                }
-            }
-        }
-
-        .section-about{
-
-        }
     }
 }
