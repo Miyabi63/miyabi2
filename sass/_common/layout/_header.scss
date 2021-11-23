@@ -1,0 +1,41 @@
+
+@charset "utf-8";
+
+//------------------------------------------------------------------------------
+// ヘッダー
+//------------------------------------------------------------------------------
+
+header{
+    box-shadow: 0 1px 5px rgba(0, 0, 0, .1);
+    
+   position: sticky;
+   top: 0;
+ 
+    >.container{
+        height: $s-08;
+        width: 100%;
+        padding: $s-02;
+        background-color: #fff;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .header-logo{
+            font-size: $s-04;
+        }
+
+        .header-nav{
+            display: none;
+            ul{
+                display: flex;
+                li{
+                    margin-left: $s-05;
+                }
+            }
+        }
+
+        // ham-test --------------------------------------------------
+
+    }
+}
