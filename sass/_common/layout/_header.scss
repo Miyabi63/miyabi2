@@ -1,4 +1,3 @@
-
 @charset "utf-8";
 
 //------------------------------------------------------------------------------
@@ -8,34 +7,38 @@
 header{
     box-shadow: 0 1px 5px rgba(0, 0, 0, .1);
     
-   position: sticky;
-   top: 0;
+    position: sticky;
+    top: 0;
  
-    >.container{
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
         height: $s-08;
         width: 100%;
         padding: $s-02;
         background-color: #fff;
+    }
 
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
 
-        .header-logo{
-            font-size: $s-04;
+    // ロゴ
+    //----------------------------------------------------------------
+    .header-logo{
+        font-size: $s-04;
+    }
+
+
+    // ナビゲーションメニュー
+    //----------------------------------------------------------------
+    .header-nav{
+        display: none;
+        
+        .header-nav_list{
+            display: flex;
         }
-
-        .header-nav{
-            display: none;
-            ul{
-                display: flex;
-                li{
-                    margin-left: $s-05;
-                }
-            }
+        
+        .header-nav_list-item{
+            margin-left: $s-05;
         }
-
-        // ham-test --------------------------------------------------
-
     }
 }
