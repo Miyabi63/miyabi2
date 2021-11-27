@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 //------------------------------------------------------------------------------
-// タグのスタイル一括指定
+// リセットCSS
 //------------------------------------------------------------------------------
 
 html{
@@ -12,12 +12,10 @@ body{
     background-color: #f3f6f9;
     color: #555;
     font-size: 1.6rem;
-    line-height: 1.4;
     font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, 'メイリオ', Meiryo, sans-serif;
 }
 
 img{
-    max-width: 100%;
     object-fit: cover;
 }
 
