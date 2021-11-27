@@ -22,13 +22,13 @@ main >.container{
     .section-work{
         margin-bottom: $s-05;
         
-        .work-area{
-            width: 90%;
+        .section-work_area{
+            width: 85%;
             display: flex;
             flex-wrap: wrap;
             margin: 0 auto;
             
-            .work-item{
+            .section-work_area-item{
                 flex: 0 0 100%;
                 padding: $s-03;
 
@@ -36,14 +36,14 @@ main >.container{
                 box-shadow: 0 1px 5px rgba(0, 0, 0, .1);
                 border-radius: 5px;
 
-                .item-head{
+                .section-work_area-item-head{
                     margin-bottom: $s-01;
                     text-align: center;
                     font-size: 2.4rem;
                     letter-spacing: .08em;
                 }
 
-                .item-img{
+                .section-work_area-item-img{
                     margin-bottom: $s-01;
                     text-align: center;
                     img{
@@ -59,7 +59,7 @@ main >.container{
                 }
 
                 &:not(:last-child){
-                    margin-bottom: $s-02;
+                    margin-bottom: $s-05;
                 }
             }
         }
