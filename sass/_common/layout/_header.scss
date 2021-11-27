@@ -5,40 +5,70 @@
 //------------------------------------------------------------------------------
 
 header{
+    background-color: #fff;
     box-shadow: 0 1px 5px rgba(0, 0, 0, .1);
     
     position: sticky;
     top: 0;
  
     .container{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        height: $s-08;
-        width: 100%;
-        padding: $s-02;
-        background-color: #fff;
+        padding: $s-02 0;
+
+        @include mq(md){
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: $cont-width;
+            margin: 0 auto;
+        }
     }
 
 
     // ロゴ
     //----------------------------------------------------------------
     .header-logo{
-        font-size: $s-04;
+        margin-bottom: $s-02;
+        text-align: center;
+        font-size: $s-03;
+
+        @include mq(md){
+            margin: 0 0 0 $s-05;
+        }
     }
 
 
     // ナビゲーションメニュー
     //----------------------------------------------------------------
     .header-nav{
-        display: none;
+        @include mq(md){
+            margin-right: $s-05;
+        }
         
         .header-nav_list{
             display: flex;
         }
         
         .header-nav_list-item{
-            margin-left: $s-05;
+            margin: 0 auto;
+            text-align: center;
+
+            @include mq(sm){
+                width: 25%;
+            }
+
+            &:not(:last-child){
+                @include mq(md){
+                    margin-right: $s-03;
+                }
+            }
+        }
+
+        .header-nav_list-item-link{
+            font-size: 1.5rem;
+
+            @include mq(sm){
+                font-size: 1.6rem;
+            }
         }
     }
 }

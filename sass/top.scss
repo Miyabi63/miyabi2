@@ -7,7 +7,7 @@
 // TOPページ
 //------------------------------------------------------------------------------
 
-main >.container{
+main >.container{    
 
     // メインビジュアル
     //----------------------------------------------------------------
@@ -24,44 +24,67 @@ main >.container{
         
         .section-work_area{
             width: 85%;
+            max-width: 600px;
             display: flex;
             flex-wrap: wrap;
             margin: 0 auto;
-            
-            .section-work_area-item{
-                flex: 0 0 100%;
-                padding: $s-03;
 
-                background-color: #fff;
-                box-shadow: 0 1px 5px rgba(0, 0, 0, .1);
-                border-radius: 5px;
+            @include mq(md){
+                width: 90%;
+                max-width: $cont-width;
+                justify-content: space-between;
+            }
 
-                .section-work_area-item-head{
-                    margin-bottom: $s-01;
-                    text-align: center;
-                    font-size: 2.4rem;
-                    letter-spacing: .08em;
-                }
+            @include mq(lg){
+                width: 85%;
+            }
+        }
 
-                .section-work_area-item-img{
-                    margin-bottom: $s-01;
-                    text-align: center;
-                    img{
-                        width: $s-10;
-                    }
-                }
+        .section-work_area-item{
+            flex: 0 0 100%;
+            padding: $s-03;
 
-                .item-text{
-                    text-align: left;
-                    font-size: 1.4rem;
-                    line-height: 2;
+            background-color: #fff;
+            box-shadow: 0 1px 5px rgba(0, 0, 0, .1);
+            border-radius: 5px;
 
-                }
+            @include mq(md){
+                flex: 0 0 31%;
+            }
 
-                &:not(:last-child){
-                    margin-bottom: $s-05;
+            @include mq(lg){
+                flex: 0 0 30%;
+            }
+
+            &:not(:last-child){
+                margin-bottom: $s-05;
+
+                @include mq(md){
+                    margin-bottom: 0;
                 }
             }
+        }
+
+        .section-work_area-item-head{
+            margin-bottom: $s-01;
+            text-align: center;
+            font-size: 2.4rem;
+            letter-spacing: .08em;
+        }
+
+        .section-work_area-item-img{
+            margin-bottom: $s-01;
+            text-align: center;
+            
+            img{
+                width: $s-07;
+            }
+        }
+
+        .section-work_area-item-text{
+            text-align: left;
+            font-size: 1.4rem;
+            line-height: 2;
         }
     }
 

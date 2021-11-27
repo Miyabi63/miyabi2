@@ -13,6 +13,9 @@ $breakpoints: (
   'xxl': (min-width: 1440px),
 ) !default;
 
+// コンテンツ幅
+$cont-width: 1200px;
+
 // spacing
 $s-0: 0;
 $s-half: .4rem;

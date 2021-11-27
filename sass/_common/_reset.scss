@@ -2,11 +2,29 @@
 // リセットCSS
 //------------------------------------------------------------------------------
 
-// modern-reset-css URL: https://github.com/andy-piccalilli/modern-css-reset/blob/master/dist/reset.min.css
 *,
 *::before,
 *::after {
     box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+body{
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+
+    background-color: #f3f6f9;
+    color: #555;
+    font-size: 1.6rem;
+    font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, 'メイリオ', Meiryo, sans-serif;
 }
 
 body,
@@ -20,21 +38,19 @@ blockquote,
 dl,
 dd {
     margin: 0;
+    padding: 0;
 }
 
-ul[role="list"],
-ol[role="list"] {
+ul,
+ol {
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
-html:focus-within {
-    scroll-behavior: smooth;
-}
-
-body {
-    min-height: 100vh;
-    text-rendering: optimizeSpeed;
-    line-height: 1.5;
+a{
+    text-decoration: none;
+    color: inherit;
 }
 
 a:not([class]) {
@@ -44,7 +60,7 @@ a:not([class]) {
 img,
 picture {
     max-width: 100%;
-    //display: block; // 個人的なコメントアウト
+    height: auto;
 }
 
 input,
