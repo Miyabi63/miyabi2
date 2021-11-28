@@ -46,6 +46,7 @@ header{
         
         .header-nav_list{
             display: flex;
+            align-items: center;
         }
         
         .header-nav_list-item{
@@ -68,6 +69,12 @@ header{
 
             @include mq(sm){
                 font-size: 1.6rem;
+            }
+
+            img,
+            svg{
+                width: 20px;
+                display: block;
             }
         }
     }
