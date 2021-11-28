@@ -6,8 +6,6 @@
         "../sass/_common/_setting.scss",
         "../sass/_common/setting/_variable.scss",
         "../sass/_common/setting/_mixin.scss",
-        "../sass/_common/setting/_rem.scss",
-        "../sass/_common/setting/_vw.scss",
         "../sass/_common/setting/_color.scss"
     ],
     "names": [],
