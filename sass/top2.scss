@@ -30,13 +30,10 @@ main >.container{
             margin: 0 auto;
 
             @include mq(md){
-                width: 90%;
-                max-width: $cont-width;
                 justify-content: space-between;
-            }
-
-            @include mq(lg){
-                width: 85%;
+                width: 100%;
+                max-width: $cont-width;
+                padding: 0 $s-04;
             }
         }
 

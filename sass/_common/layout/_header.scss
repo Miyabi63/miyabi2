@@ -12,14 +12,16 @@ header{
     top: 0;
  
     .container{
+        margin: 0 5%;
         padding: $s-02 0;
-
-        @include mq(md){
+        
+        @include mq(sm){
             display: flex;
             justify-content: space-between;
             align-items: center;
             max-width: $cont-width;
             margin: 0 auto;
+            padding: $s-02 $s-04;
         }
     }
 
@@ -27,21 +29,41 @@ header{
     // ロゴ
     //----------------------------------------------------------------
     .header-logo{
-        margin-bottom: $s-02;
-        text-align: center;
         font-size: $s-03;
 
         @include mq(md){
-            margin: 0 0 0 $s-05;
+            margin-bottom: 0;
         }
     }
 
 
     // ナビゲーションメニュー
     //----------------------------------------------------------------
-    .header-nav{
+    .header-nav-sp{
+        display: none;
+
         @include mq(md){
-            margin-right: $s-05;
+            display: none;
+        }
+        
+        .header-nav_list{
+
+        }
+        
+        .header-nav_list-item{
+
+        }
+
+        .header-nav_list-item-link{
+
+        }
+    }
+    
+    .header-nav-pc{
+        display: none;
+
+        @include mq(sm){
+            display: block;
         }
         
         .header-nav_list{
@@ -58,7 +80,7 @@ header{
             }
 
             &:not(:last-child){
-                @include mq(md){
+                @include mq(sm){
                     margin-right: $s-03;
                 }
             }
@@ -73,8 +95,9 @@ header{
 
             img,
             svg{
-                width: 20px;
                 display: block;
+                width: 20px;
+                margin: 0 auto;
             }
         }
     }
