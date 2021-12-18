@@ -4,6 +4,16 @@
 // _common/layoutのファイルをインポート
 //------------------------------------------------------------------------------
 
+.site-wrapper{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main{
+    flex: 1;
+    overflow-x: hidden;
+}
+
 @import "layout/header";
-@import "layout/main";
 @import "layout/footer";
