@@ -1,0 +1,23 @@
+{
+  "name": "miyabi",
+  "version": "1.0.0",
+  "description": "- index.html - css - sass - img",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Miyabi63/miyabi.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Miyabi63/miyabi/issues"
+  },
+  "homepage": "https://github.com/Miyabi63/miyabi#readme",
+  "dependencies": {
+    "gulp": "^4.0.2"
+  }
+}
