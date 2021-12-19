@@ -7,6 +7,79 @@
 // TOPページ
 //------------------------------------------------------------------------------
 
-main >.main-container{
+.main-container{
+
+    // セクション共通の設定
+    .cont-section{
+        max-width: 1000px;
+        margin: 0 auto;
+        margin-bottom: 40px;
+    }
     
+    // メインビジュアル
+    //----------------------------------------------------------------
+    .main-visual{
+        max-width: 1000px;
+        min-height: 80vh;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+
+        // キャッチコピー
+        .main-visual_catch{
+            font-size: rem(32);
+
+            @include mq(sm){
+                font-size: rem(48);
+            }
+
+            @include mq(md){
+                font-size: rem(56);
+            }
+        }
+    }
+
+
+    // Work
+    //----------------------------------------------------------------
+    .section-work{
+        .section-work_area{
+        }
+
+        .section-work_area-item{
+
+
+            &:not(:last-child){
+                margin-bottom: 40px;
+            }
+        }
+
+        .section-work_area-item-head{
+            margin-bottom: 8px;
+            text-align: center;
+            font-size: rem(24);
+            font-weight: normal;
+            letter-spacing: .08em;
+        }
+
+        .section-work_area-item-img{
+            margin-bottom: 8px;
+            text-align: center;
+            
+            img{
+                width: 56px;
+            }
+        }
+
+        .section-work_area-item-text{
+            text-align: left;
+            font-size: rem(14);
+            line-height: 2;
+        }
+    }
+
+
+    // About
+    //----------------------------------------------------------------
+
 }

@@ -1,0 +1,65 @@
+@charset "utf-8";
+
+//------------------------------------------------------------------------------
+// 汎用パーツ
+//------------------------------------------------------------------------------
+
+// 見出し
+//--------------------------------------------------------------------
+.section-head {
+    margin-bottom: 16px;
+    text-align: center;
+    font-size: rem(32);
+    font-weight: normal;
+    letter-spacing: .08em;
+}
+
+
+
+//------------------------------------------------------------------------------
+// 全ページ共通パーツ
+//------------------------------------------------------------------------------
+
+// 追従するトップへ戻るボタン
+#page-top {
+    position: fixed;
+    bottom: 40px;
+    right: 32px;
+    z-index: 1;
+
+    padding: 16px 6px 4px 0;
+    border-right: 1px solid #000;
+    writing-mode: vertical-rl;
+    font-size: 16px;
+    line-height: 1;
+    color: #000;
+    opacity: .6;
+
+    @include mq(sm){
+        right: 40px;
+    }
+
+    &:before{
+        position: absolute;
+        top: 7px;
+        right: -13px;
+        transform: rotate(60deg);
+
+        content: "";
+        display: block;
+        width: 16px;
+        height: 1px;
+        background-color: #000;
+    }
+
+    &:hover{
+        @include mq(md){
+            color: #555;
+            border-right: 1px solid #555;
+    
+            &:before{
+                background-color: #555;
+            }            
+        }    
+    }
+}

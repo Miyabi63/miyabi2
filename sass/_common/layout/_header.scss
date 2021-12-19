@@ -4,25 +4,21 @@
 // ヘッダー
 //------------------------------------------------------------------------------
 
-header{
+.site-header{
     // background-color: #fff;
     background-color: #fbfbfb;
-    box-shadow: 0 1px 5px rgba(0, 0, 0, .1);
+    padding: 16px 5%;
     
     position: sticky;
     top: 0;
  
-    .header-container{
-        margin: 0 5%;
-        padding: $s-02 0;
-        
+    .header-container{       
         @include mq(sm){
             display: flex;
             justify-content: space-between;
             align-items: center;
             max-width: $cont-width;
             margin: 0 auto;
-            padding: $s-02 $s-04;
         }
     }
 
@@ -30,7 +26,7 @@ header{
     // ロゴ
     //----------------------------------------------------------------
     .header-logo{
-        font-size: $s-03;
+        font-size: rem(24);
 
         @include mq(md){
             margin-bottom: 0;
@@ -82,16 +78,16 @@ header{
 
             &:not(:last-child){
                 @include mq(sm){
-                    margin-right: $s-03;
+                    margin-right: 24px;
                 }
             }
         }
 
         .header-nav_list-item-link{
-            font-size: 1.5rem;
+            font-size: rem(15);
 
             @include mq(sm){
-                font-size: 1.6rem;
+                font-size: rem(16);
             }
 
             img,

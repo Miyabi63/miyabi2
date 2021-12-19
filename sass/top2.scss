@@ -13,14 +13,14 @@ main >.main-container{
     //----------------------------------------------------------------
     .main-visual{
         min-height: 200px;
-        margin-bottom: $s-05;
+        margin-bottom: 40px;
     }
 
 
     // Work
     //----------------------------------------------------------------
     .section-work{
-        margin-bottom: $s-05;
+        margin-bottom: 40px;
         
         .section-work_area{
             width: 85%;
@@ -33,13 +33,13 @@ main >.main-container{
                 justify-content: space-between;
                 width: 100%;
                 max-width: $cont-width;
-                padding: 0 $s-04;
+                padding: 0 32px;
             }
         }
 
         .section-work_area-item{
             flex: 0 0 100%;
-            padding: $s-03;
+            padding: 24px;
 
             background-color: #fff;
             box-shadow: 0 1px 5px rgba(0, 0, 0, .1);
@@ -54,7 +54,7 @@ main >.main-container{
             }
 
             &:not(:last-child){
-                margin-bottom: $s-05;
+                margin-bottom: 40px;
 
                 @include mq(md){
                     margin-bottom: 0;
@@ -63,24 +63,24 @@ main >.main-container{
         }
 
         .section-work_area-item-head{
-            margin-bottom: $s-01;
+            margin-bottom: 8px;
             text-align: center;
-            font-size: 2.4rem;
+            font-size: rem(24);
             letter-spacing: .08em;
         }
 
         .section-work_area-item-img{
-            margin-bottom: $s-01;
+            margin-bottom: 8px;
             text-align: center;
             
             img{
-                width: $s-07;
+                width: 56px;
             }
         }
 
         .section-work_area-item-text{
             text-align: left;
-            font-size: 1.4rem;
+            font-size: rem(14);
             line-height: 2;
         }
     }
