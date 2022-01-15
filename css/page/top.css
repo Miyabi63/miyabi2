@@ -1,16 +1,3 @@
-@charset "UTF-8";
-body {
-  background-color: #fbfbfb;
-  color: #555;
-  font-family: Helvetica, "游ゴシック", "Yu Gothic", YuGothic, "メイリオ", Meiryo, sans-serif;
-}
-
-.is-active {
-  opacity: 0.6;
-  opacity: 1;
-  transform: translate(0, 0);
-}
-
 .main-container .cont-section {
   max-width: 1000px;
   margin: 0 auto;

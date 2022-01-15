@@ -80,12 +80,6 @@ body {
   font-family: Helvetica, "游ゴシック", "Yu Gothic", YuGothic, "メイリオ", Meiryo, sans-serif;
 }
 
-.is-active {
-  opacity: 0.6;
-  opacity: 1;
-  transform: translate(0, 0);
-}
-
 .site-wrapper {
   display: flex;
   flex-direction: column;
@@ -97,6 +91,7 @@ body {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
+  z-index: 1;
 }
 .site-header .header-container {
   display: flex;
@@ -256,7 +251,6 @@ main {
   width: 100%;
   background-color: #fbfbfb;
   position: relative;
-  z-index: -1;
 }
 .footer-container .footer-copyright {
   position: absolute;
@@ -279,14 +273,13 @@ main {
   position: fixed;
   bottom: 40px;
   right: 32px;
-  z-index: 1;
   padding: 16px 6px 4px 0;
-  border-right: 1px solid #333;
+  border-right: 1px solid #555;
   -ms-writing-mode: tb-rl;
       writing-mode: vertical-rl;
   font-size: 16px;
   line-height: 1;
-  color: #333;
+  color: #555;
   opacity: 0;
   transform: translate(0, 40px);
   transition: opacity 0.5s, transform 0.75s;
@@ -306,14 +299,20 @@ main {
   display: block;
   width: 16px;
   height: 1px;
-  background-color: #000;
+  background-color: #555;
 }
 @media screen and (min-width: 768px) {
   .page-top:hover {
-    color: #555;
-    border-right: 1px solid #555;
+    color: #777;
+    border-right: 1px solid #777;
   }
   .page-top:hover:before {
-    background-color: #555;
+    background-color: #777;
   }
+}
+
+.is-active {
+  opacity: 0.6;
+  opacity: 1;
+  transform: translate(0, 0);
 }
