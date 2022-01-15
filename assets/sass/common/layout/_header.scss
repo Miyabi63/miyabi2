@@ -1,0 +1,194 @@
+//------------------------------------------------------------------------------
+// ヘッダー
+//------------------------------------------------------------------------------
+
+@use "../settings/mixin" as m;
+
+
+.site-header {
+	background-color: #fbfbfb;
+
+	position: sticky;
+	top: 0;
+
+	.header-container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		max-width: 1000px;
+		margin: 0 auto;
+		padding: 16px 5%;
+
+		position: relative;
+	}
+
+
+	// ロゴ
+	//----------------------------------------------------------------
+	.header-logo {
+		// font-size: s.rem(24);
+		font-size: 24px;
+
+		@include mq(sm) {
+			// font-size: s.rem(32);
+			font-size: 32px;
+		}
+
+		@include mq(md) {
+			margin-bottom: 0;
+		}
+	}
+
+
+	// ナビゲーションメニュー
+	//----------------------------------------------------------------
+
+	// ハンバーガーメニュー ボタン
+	.menu {
+		input {
+			position: absolute;
+			right: 7%;
+			opacity: 0;
+		}
+
+		.g-menu-btn {
+			display: flex;
+			height: 40px;
+			width: 40px;
+			justify-content: center;
+			align-items: center;
+			cursor: pointer;
+
+			@include mq(sm) {
+				display: none;
+			}
+		}
+
+		// 三本線
+		.g-menu-btn span,
+		.g-menu-btn span:before,
+		.g-menu-btn span:after {
+			content: '';
+			display: block;
+			height: 3px;
+			width: 24px;
+			border-radius: 3px;
+			background-color: #555;
+			position: absolute;
+			transition: all .25s;
+			/*アニメーションの設定*/
+		}
+
+		.g-menu-btn span:before {
+			bottom: 8px;
+		}
+
+		.g-menu-btn span:after {
+			top: 8px;
+		}
+
+		// チェックした時のアニメーション
+		#g-menu:checked~.g-menu-btn span {
+			background-color: rgba(255, 255, 255, 0);
+		}
+
+		#g-menu:checked~.g-menu-btn span::before {
+			bottom: 0;
+			transform: rotate(45deg);
+		}
+
+		#g-menu:checked~.g-menu-btn span::after {
+			top: 0;
+			transform: rotate(-45deg);
+		}
+
+		// スマホ
+		.header-nav-sp {
+			background-color: #fbfbfb;
+			position: fixed;
+			top: 0;
+			right: -100%;
+			z-index: -1;
+
+
+			width: 100%;
+			height: 100vh;
+			padding: 130px 5% 0 5%;
+			transition: all .25s;
+
+			@include mq(sm) {
+				display: none;
+			}
+
+			.header-nav_list-item {
+				margin-bottom: 40px;
+				text-align: center;
+				// font-size: s.rem(18);
+				font-size: 18px;
+
+				&.-close {
+					position: relative;
+					top: 40px;
+					// font-size: s.rem(16);
+					font-size: 16px;
+				}
+			}
+
+			.header-nav_list-item-link-img {
+				width: 16px;
+				margin-right: 8px;
+			}
+		}
+
+		// ボタンが押された時の挙動
+		#g-menu:checked~.header-nav-sp {
+			right: 0;
+		}
+	}
+
+
+	// PC
+	.header-nav-pc {
+		display: none;
+
+		@include mq(sm) {
+			display: block;
+		}
+
+		.header-nav_list {
+			display: flex;
+			align-items: center;
+		}
+
+		.header-nav_list-item {
+			margin: 0 auto;
+			text-align: center;
+
+			@include mq(sm) {
+				width: 25%;
+			}
+
+			&:not(:last-child) {
+				@include mq(sm) {
+					margin-right: 24px;
+				}
+			}
+		}
+
+		.header-nav_list-item-link {
+			// font-size: s.rem(15);
+			font-size: 15px;
+
+			@include mq(sm) {
+				// font-size: s.rem(16);
+				font-size: 16px;
+			}
+		}
+
+		.header-nav_list-item-link-img {
+			display: block;
+			width: 20px;
+			margin: 0 auto;
+		}
+	}
+}

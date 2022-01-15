@@ -1,7 +1,6 @@
 @charset "utf-8";
 
 // 変数・カラーをインポート
-@import "_common/setting";
 
 //------------------------------------------------------------------------------
 // TOPページ
@@ -13,28 +12,36 @@
     .cont-section{
         max-width: 1000px;
         margin: 0 auto;
-        margin-bottom: 40px;
+        margin-bottom: 80px;
     }
     
     // メインビジュアル
     //----------------------------------------------------------------
     .main-visual{
         max-width: 1000px;
-        min-height: 80vh;
+        min-height: 70vh;
         margin: 0 auto;
         display: flex;
         align-items: center;
 
+        @include mq(sm){
+            min-height: 80vh;
+        }
+
         // キャッチコピー
         .main-visual_catch{
-            font-size: rem(32);
+            // font-size: s.rem(32);
+            font-size: 9.3vw;
+            font-size: unquote('max(9.3vw, 2.4rem)');
 
             @include mq(sm){
-                font-size: rem(48);
+                // font-size: s.rem(48);
+                font-size: unquote('max(7vw, 3rem)');
             }
 
             @include mq(md){
-                font-size: rem(56);
+                // font-size: s.rem(56);
+				font-size: 56px;
             }
         }
     }
@@ -44,21 +51,29 @@
     //----------------------------------------------------------------
     .section-work{
         .section-work_area{
+            @include mq(sm){
+                display: flex;
+                justify-content: space-between;
+                gap: 5%;
+            }
         }
 
         .section-work_area-item{
-
-
+            width: 90%;
+            max-width: 400px;
+            margin: 0 auto;
+            
             &:not(:last-child){
-                margin-bottom: 40px;
+                margin-bottom: 48px;
             }
         }
 
         .section-work_area-item-head{
             margin-bottom: 8px;
             text-align: center;
-            font-size: rem(24);
-            font-weight: normal;
+            // font-size: s.rem(24);
+			font-size: 24px;
+			font-weight: normal;
             letter-spacing: .08em;
         }
 
@@ -73,8 +88,9 @@
 
         .section-work_area-item-text{
             text-align: left;
-            font-size: rem(14);
-            line-height: 2;
+            // font-size: s.rem(14);
+			font-size: 14px;
+			line-height: 2;
         }
     }
 

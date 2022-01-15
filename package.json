@@ -1,0 +1,32 @@
+{
+	"name": "miyabi",
+	"version": "1.0.0",
+	"description": "- index.html - css - sass - img",
+	"main": "gulpfile.js",
+	"devDependencies": {
+		"gulp": "^4.0.2",
+		"gulp-sass": "^5.1.0",
+		"sass": "^1.48.0"
+	},
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Miyabi63/miyabi.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/Miyabi63/miyabi/issues"
+	},
+	"homepage": "https://github.com/Miyabi63/miyabi#readme",
+	"dependencies": {
+		"gulp-autoprefixer": "^8.0.0",
+		"gulp-cssmin": "^0.2.0",
+		"gulp-plumber": "^1.2.1",
+		"gulp-rename": "^2.0.0",
+		"gulp-uglify": "^3.0.2"
+	}
+}

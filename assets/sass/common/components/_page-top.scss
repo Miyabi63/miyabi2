@@ -1,0 +1,46 @@
+// 追従するトップへ戻るボタン
+.page-top {
+	position: fixed;
+	bottom: 40px;
+	right: 32px;
+	z-index: 1;
+
+	padding: 16px 6px 4px 0;
+	border-right: 1px solid #333;
+	writing-mode: vertical-rl;
+	font-size: 16px;
+	line-height: 1;
+	color: #333;
+	opacity: 0;
+	transform: translate(0, 40px);
+	transition: opacity .5s, transform .75s;
+	cursor: pointer;
+
+	@include mq(sm) {
+		right: 48px;
+	}
+
+	&:before {
+		position: absolute;
+		top: 7px;
+		right: -13px;
+		transform: rotate(60deg);
+
+		content: "";
+		display: block;
+		width: 16px;
+		height: 1px;
+		background-color: #000;
+	}
+
+	&:hover {
+		@include mq(md) {
+			color: #555;
+			border-right: 1px solid #555;
+
+			&:before {
+				background-color: #555;
+			}
+		}
+	}
+}

@@ -3,11 +3,7 @@
 //------------------------------------------------------------------------------
 // コンパイル元のscssファイル
 //------------------------------------------------------------------------------
-
-// 変数・カラーをインポート
-@import "_common/setting";
-
-// ベースのCSS
-@import "_common/reset";
-@import "_common/layout";
-@import "_common/parts";
+@use "common/reset";
+@use "common/setting";
+@use "common/layout";
+@use "common/component";
