@@ -28,12 +28,10 @@
 	// ロゴ
 	//----------------------------------------------------------------
 	.header-logo {
-		// font-size: f.rem(24);
-		font-size: 24px;
+		font-size: f.rem(24);
 
 		@include m.mq(sm) {
-			// font-size: f.rem(32);
-			font-size: 32px;
+			font-size: f.rem(32);
 		}
 
 		@include m.mq(md) {
@@ -125,14 +123,12 @@
 			.header-nav_list-item {
 				margin-bottom: 40px;
 				text-align: center;
-				// font-size: f.rem(18);
-				font-size: 18px;
+				font-size: f.rem(18);
 
 				&.-close {
 					position: relative;
 					top: 40px;
-					// font-size: f.rem(16);
-					font-size: 16px;
+					font-size: f.rem(16);
 				}
 			}
 
@@ -178,12 +174,10 @@
 		}
 
 		.header-nav_list-item-link {
-			// font-size: f.rem(15);
-			font-size: 15px;
+			font-size: f.rem(15);
 
 			@include m.mq(sm) {
-				// font-size: f.rem(16);
-				font-size: 16px;
+				font-size: f.rem(16);
 			}
 		}
 

@@ -29,17 +29,19 @@ body {
   }
 }
 .main-container .main-visual .main-visual_catch {
+  font-size: 2rem;
   font-size: 9.3vw;
   font-size: max(9.3vw, 2.4rem);
 }
 @media screen and (min-width: 600px) {
   .main-container .main-visual .main-visual_catch {
+    font-size: 3rem;
     font-size: max(7vw, 3rem);
   }
 }
 @media screen and (min-width: 768px) {
   .main-container .main-visual .main-visual_catch {
-    font-size: 56px;
+    font-size: 3.5rem;
   }
 }
 @media screen and (min-width: 600px) {
@@ -60,7 +62,7 @@ body {
 .main-container .section-work .section-work_area-item-head {
   margin-bottom: 8px;
   text-align: center;
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: normal;
   letter-spacing: 0.08em;
 }
@@ -73,7 +75,7 @@ body {
 }
 .main-container .section-work .section-work_area-item-text {
   text-align: left;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 2;
 }
 /*# sourceMappingURL=top.css.map */
