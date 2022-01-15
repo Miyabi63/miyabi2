@@ -1,0 +1,1 @@
+$(window).on("load scroll resize",function(){400<$(window).scrollTop()?$(".page-top").addClass("is-active"):$(".page-top").removeClass("is-active")}),$(".page-top").on("click",function(){return $("html,body").animate({scrollTop:0},300),!1});
