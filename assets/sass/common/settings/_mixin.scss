@@ -2,11 +2,21 @@
 // mixinを定義
 //------------------------------------------------------------------------------
 
-@use "variable" as v;
+// メディアクエリ ブレイクポイント関連
+// -------------------------------------------------------------------
+
+// ブレイクポイントのキーを設定
+$breakpoints: (
+	sm: 'screen and (min-width: 600px)',
+	md: 'screen and (min-width: 768px)',
+	lg: 'screen and (min-width: 1024px)',
+	xl: 'screen and (min-width: 1280px)',
+	xxl: 'screen and (min-width: 1440px)',
+) !default;
 
 // ブレイクポイントを定義
-@mixin mq($breakpoint: sm) {
-	@media #{map-get(v.$breakpoints, $breakpoint)} {
+@mixin mq($bp) {
+	@media #{map-get($breakpoints, $bp)} {
 		@content;
 	}
 }

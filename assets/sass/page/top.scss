@@ -1,10 +1,13 @@
 @charset "utf-8";
-
-// 変数・カラーをインポート
-
 //------------------------------------------------------------------------------
 // TOPページ
 //------------------------------------------------------------------------------
+
+// ファイルの読み込み
+@use "../common/setting";
+@use "../common/settings/mixin" as m;
+@use "../common/settings/function" as f;
+
 
 .main-container{
 
@@ -24,23 +27,23 @@
         display: flex;
         align-items: center;
 
-        @include mq(sm){
+        @include m.mq(sm){
             min-height: 80vh;
         }
 
         // キャッチコピー
         .main-visual_catch{
-            // font-size: s.rem(32);
+            // font-size: f.rem(32);
             font-size: 9.3vw;
             font-size: unquote('max(9.3vw, 2.4rem)');
 
-            @include mq(sm){
-                // font-size: s.rem(48);
+            @include m.mq(sm){
+                // font-size: f.rem(48);
                 font-size: unquote('max(7vw, 3rem)');
             }
 
-            @include mq(md){
-                // font-size: s.rem(56);
+            @include m.mq(md){
+                // font-size: f.rem(56);
 				font-size: 56px;
             }
         }
@@ -51,7 +54,7 @@
     //----------------------------------------------------------------
     .section-work{
         .section-work_area{
-            @include mq(sm){
+            @include m.mq(sm){
                 display: flex;
                 justify-content: space-between;
                 gap: 5%;
@@ -71,7 +74,7 @@
         .section-work_area-item-head{
             margin-bottom: 8px;
             text-align: center;
-            // font-size: s.rem(24);
+            // font-size: f.rem(24);
 			font-size: 24px;
 			font-weight: normal;
             letter-spacing: .08em;
@@ -88,7 +91,7 @@
 
         .section-work_area-item-text{
             text-align: left;
-            // font-size: s.rem(14);
+            // font-size: f.rem(14);
 			font-size: 14px;
 			line-height: 2;
         }

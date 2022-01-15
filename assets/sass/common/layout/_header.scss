@@ -2,7 +2,9 @@
 // ヘッダー
 //------------------------------------------------------------------------------
 
+// ファイルの読み込み
 @use "../settings/mixin" as m;
+@use "../settings/function" as f;
 
 
 .site-header {
@@ -26,15 +28,15 @@
 	// ロゴ
 	//----------------------------------------------------------------
 	.header-logo {
-		// font-size: s.rem(24);
+		// font-size: f.rem(24);
 		font-size: 24px;
 
-		@include mq(sm) {
-			// font-size: s.rem(32);
+		@include m.mq(sm) {
+			// font-size: f.rem(32);
 			font-size: 32px;
 		}
 
-		@include mq(md) {
+		@include m.mq(md) {
 			margin-bottom: 0;
 		}
 	}
@@ -59,7 +61,7 @@
 			align-items: center;
 			cursor: pointer;
 
-			@include mq(sm) {
+			@include m.mq(sm) {
 				display: none;
 			}
 		}
@@ -116,20 +118,20 @@
 			padding: 130px 5% 0 5%;
 			transition: all .25s;
 
-			@include mq(sm) {
+			@include m.mq(sm) {
 				display: none;
 			}
 
 			.header-nav_list-item {
 				margin-bottom: 40px;
 				text-align: center;
-				// font-size: s.rem(18);
+				// font-size: f.rem(18);
 				font-size: 18px;
 
 				&.-close {
 					position: relative;
 					top: 40px;
-					// font-size: s.rem(16);
+					// font-size: f.rem(16);
 					font-size: 16px;
 				}
 			}
@@ -151,7 +153,7 @@
 	.header-nav-pc {
 		display: none;
 
-		@include mq(sm) {
+		@include m.mq(sm) {
 			display: block;
 		}
 
@@ -164,23 +166,23 @@
 			margin: 0 auto;
 			text-align: center;
 
-			@include mq(sm) {
+			@include m.mq(sm) {
 				width: 25%;
 			}
 
 			&:not(:last-child) {
-				@include mq(sm) {
+				@include m.mq(sm) {
 					margin-right: 24px;
 				}
 			}
 		}
 
 		.header-nav_list-item-link {
-			// font-size: s.rem(15);
+			// font-size: f.rem(15);
 			font-size: 15px;
 
-			@include mq(sm) {
-				// font-size: s.rem(16);
+			@include m.mq(sm) {
+				// font-size: f.rem(16);
 				font-size: 16px;
 			}
 		}

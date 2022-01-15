@@ -2,6 +2,11 @@
 // フッター
 //------------------------------------------------------------------------------
 
+// ファイルの読み込み
+@use "../settings/mixin" as m;
+@use "../settings/function" as f;
+
+
 .footer-container {
 	height: 104px;
 	width: 100%;

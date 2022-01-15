@@ -1,4 +1,11 @@
+//--------------------------------------------------------------------
 // 追従するトップへ戻るボタン
+//--------------------------------------------------------------------
+
+// ファイルの読み込み
+@use "../settings/mixin" as m;
+
+
 .page-top {
 	position: fixed;
 	bottom: 40px;
@@ -16,10 +23,11 @@
 	transition: opacity .5s, transform .75s;
 	cursor: pointer;
 
-	@include mq(sm) {
+	@include m.mq(sm) {
 		right: 48px;
 	}
 
+	// 矢印
 	&:before {
 		position: absolute;
 		top: 7px;
@@ -34,7 +42,7 @@
 	}
 
 	&:hover {
-		@include mq(md) {
+		@include m.mq(md) {
 			color: #555;
 			border-right: 1px solid #555;
 
