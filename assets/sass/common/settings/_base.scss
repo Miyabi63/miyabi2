@@ -7,3 +7,10 @@ body {
 	color: #555;
 	font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, 'メイリオ', Meiryo, sans-serif;
 }
+
+// 画像を選択・保存させないようにする
+img{
+	pointer-events: none;
+	user-select: none;
+	-webkit-touch-callout: none;
+}

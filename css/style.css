@@ -80,6 +80,15 @@ body {
   font-family: Helvetica, "游ゴシック", "Yu Gothic", YuGothic, "メイリオ", Meiryo, sans-serif;
 }
 
+img {
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-touch-callout: none;
+}
+
 .site-wrapper {
   display: flex;
   flex-direction: column;
